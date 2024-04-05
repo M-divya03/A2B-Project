@@ -10,14 +10,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-public class KotService {
-    @Autowired
-    private KotRepo kotRepo;
 
-    public ResponseEntity<String> saveKot(List<kot> kot) {
-        for(kot onekot:kot)
-            kotRepo.save(onekot);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
+public interface KotService {
+    ResponseEntity<String> saveKot(List<kot> kot);
+
 }
