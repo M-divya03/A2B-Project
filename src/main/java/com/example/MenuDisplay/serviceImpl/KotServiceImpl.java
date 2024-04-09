@@ -16,9 +16,14 @@ public class KotServiceImpl implements KotService {
     @Autowired
     private KotDao kotDao;
 
+    @Override
+    public ResponseEntity<String> toCart() {
+        return null;
+    }
+
     public ResponseEntity<String> saveKot(List<kot> kot) {
         for(kot onekot:kot)
-            kotDao.save(onekot);
-        return new ResponseEntity<>(HttpStatus.OK);
+           kotDao.save(onekot);
+        return null;
     }
 }

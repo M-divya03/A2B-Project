@@ -1,7 +1,8 @@
 package com.example.MenuDisplay.Dao;
 
 import com.example.MenuDisplay.entity.kot;
+import org.springframework.http.ResponseEntity;
 
 public interface KotDao {
-    void save(kot onekot);
+    ResponseEntity<String> save(kot onekot);
 }

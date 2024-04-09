@@ -14,4 +14,5 @@ import java.util.List;
 public interface KotService {
     ResponseEntity<String> saveKot(List<kot> kot);
 
+    ResponseEntity<String> toCart();
 }

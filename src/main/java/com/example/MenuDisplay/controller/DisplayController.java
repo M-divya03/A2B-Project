@@ -25,6 +25,7 @@ public class DisplayController {
 
    @GetMapping("/menu")
     public List<Category> getAllCategory(){
+
        return categoryService.getAllCategoryWithItems();
     }
 }
