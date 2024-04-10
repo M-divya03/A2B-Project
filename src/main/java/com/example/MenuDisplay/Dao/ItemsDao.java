@@ -9,4 +9,5 @@ public interface ItemsDao {
     List<Items> findAll();
 
     Category findByCategoryId(Integer parentId);
+    List<Items> findItemsByCategoryId(Integer id);
 }

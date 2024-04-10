@@ -12,6 +12,9 @@ import java.util.List;
 public interface CategoryService {
 
 
-     List<Category> getAllCategoryWithItems();
 
+
+    List<Category> findByParentIdIsNull();
+
+    List<Category> findByParentId(Integer id);
 }

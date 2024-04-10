@@ -11,4 +11,4 @@
 
 spring:
   profiles:
-    active: dev
+    active: deploy

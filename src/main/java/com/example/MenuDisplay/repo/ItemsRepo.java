@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ItemsRepo extends JpaRepository<Items,Integer> {
     Category findByCategoryId(Integer parentId);
+    Category findItemsByCategoryId(Integer Id);
 }

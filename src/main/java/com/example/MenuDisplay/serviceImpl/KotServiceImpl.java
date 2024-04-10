@@ -1,6 +1,7 @@
 package com.example.MenuDisplay.serviceImpl;
 
 import com.example.MenuDisplay.Dao.KotDao;
+import com.example.MenuDisplay.entity.Items;
 import com.example.MenuDisplay.entity.kot;
 import com.example.MenuDisplay.repo.KotRepo;
 import com.example.MenuDisplay.service.KotService;
@@ -16,10 +17,10 @@ public class KotServiceImpl implements KotService {
     @Autowired
     private KotDao kotDao;
 
-    @Override
-    public ResponseEntity<String> toCart() {
-        return null;
-    }
+   public List<kot> getItemsFromKot(){
+       return kotDao.findAll();
+
+   }
 
     public ResponseEntity<String> saveKot(List<kot> kot) {
         for(kot onekot:kot)

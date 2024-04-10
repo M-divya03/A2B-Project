@@ -9,11 +9,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface ItemsService {
 
-    List<Items> getAllItems();
-    Category getByCategoryId(Integer parentId);
 
-
+    List<Items> getItemsForCategory(Integer id);
 }

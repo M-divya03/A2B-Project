@@ -15,12 +15,18 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryDao categoryDao;
 
-
-
-
-    public List<Category> getAllCategoryWithItems(){
-        return categoryDao.findAll();
+    public List<Category> findByParentIdIsNull(){
+        return categoryDao.findByParentIdIsNull();
     }
+    public List<Category> findByParentId(Integer id){
+        return categoryDao.findByParentId(id);
+
+    }
+
+
+
+
+
 
 
 }

@@ -7,5 +7,9 @@ import java.util.List;
 public interface CategoryDao {
 
 
-    List<Category> findAll();
+
+
+    List<Category> findByParentIdIsNull();
+
+    List<Category> findByParentId(Integer id);
 }

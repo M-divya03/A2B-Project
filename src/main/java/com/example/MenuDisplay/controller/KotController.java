@@ -1,6 +1,7 @@
 package com.example.MenuDisplay.controller;
 
 
+import com.example.MenuDisplay.entity.Items;
 import com.example.MenuDisplay.entity.kot;
 import com.example.MenuDisplay.service.KotService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,12 @@ public class KotController {
     @GetMapping("/neworder")
     public ResponseEntity<String> saveOrders(@RequestBody List<kot> kot){
         return kotService.saveKot(kot);
+
+    }
+
+    @PostMapping("/getKot")
+    public List<kot> getItemsFromKot(){
+        return kotService.getItemsFromKot();
 
     }
 

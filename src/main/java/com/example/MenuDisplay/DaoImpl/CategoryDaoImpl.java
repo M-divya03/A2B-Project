@@ -19,7 +19,12 @@ public class CategoryDaoImpl implements CategoryDao {
     return categoryRepo.findAll();
    }
 
-
+    public List<Category> findByParentIdIsNull(){
+       return categoryRepo.findByParentIdIsNull();
+    }
+    public List<Category> findByParentId(Integer id){
+       return categoryRepo.findByParentId(id);
+    }
 
 
 }

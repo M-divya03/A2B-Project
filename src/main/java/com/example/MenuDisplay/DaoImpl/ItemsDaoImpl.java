@@ -22,4 +22,8 @@ public class ItemsDaoImpl implements ItemsDao {
     public Category findByCategoryId(Integer parentId){
         return itemsRepo.findByCategoryId(parentId);
     }
+
+    public  List<Items> findItemsByCategoryId(Integer id){
+        return (List<Items>) itemsRepo.findByCategoryId(id);
+    }
 }
