@@ -26,7 +26,7 @@ public class Category {
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
     @JsonManagedReference
     private List<Items> items;
-
+    private String imageUrl;
 
 
 }

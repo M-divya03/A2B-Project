@@ -16,13 +16,13 @@ public class KotController {
 
     @Autowired
     private KotService kotService;
-    @GetMapping("/neworder")
+    @PostMapping("/neworder")
     public ResponseEntity<String> saveOrders(@RequestBody List<kot> kot){
         return kotService.saveKot(kot);
 
     }
 
-    @PostMapping("/getKot")
+    @GetMapping("/getKot")
     public List<kot> getItemsFromKot(){
         return kotService.getItemsFromKot();
 

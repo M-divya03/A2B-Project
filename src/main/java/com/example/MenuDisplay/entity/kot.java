@@ -15,6 +15,7 @@ public class kot {
             strategy = GenerationType.IDENTITY
     )
     private Integer kotId;
+    private Integer orderId;
     private Integer diningId;
     private String itemName;
     private Integer quantity;

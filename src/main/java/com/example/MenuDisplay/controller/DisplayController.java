@@ -42,7 +42,7 @@ public class DisplayController {
         categoryMap.put("id", category.getId());
         categoryMap.put("name", category.getName());
         categoryMap.put("parentId", category.getParentId());
-
+        categoryMap.put("imageUrl",category.getImageUrl());
         List<Category> subcategories = categoryService.findByParentId(category.getId());
         List<Map<String, Object>> subcategoryMaps = new ArrayList<>();
 
@@ -55,6 +55,9 @@ public class DisplayController {
                 Map<String, Object> itemMap = new HashMap<>();
                 itemMap.put("id", item.getItemId());
                 itemMap.put("name", item.getItemName());
+                itemMap.put("rate",item.getItem_rate());
+                itemMap.put("description",item.getDescription());
+                itemMap.put("attribute",item.getAttribute());
                 itemMaps.add(itemMap);
             }
 
